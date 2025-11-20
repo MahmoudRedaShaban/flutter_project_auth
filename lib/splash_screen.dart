@@ -17,29 +17,31 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 3), () => Navigator.push(context, MaterialPageRoute(builder: (c)=> LoginPages())),);
+    Future.delayed(Duration(seconds: 1), () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (c)=> LoginPages())),);
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    late Size sizeScreen = MediaQuery.of(context).size;
     return Stack(
       children: [
         Scaffold(
+          backgroundColor: Color(0xffFFFFFF),
           body: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(height:  110,),
+              SizedBox(height:  sizeScreen.height * 0.13,),
               Logo(),
-              SizedBox(height:  20,),
-              SvgPicture.asset('assets/images/vector1.svg', width: 800 ),
-              SizedBox(height:  20,),
+              SizedBox(height:  sizeScreen.height * 0.07,),
+              SvgPicture.asset('assets/images/vector1.svg', width: sizeScreen.width ),
+              SizedBox(height:  sizeScreen.height * 0.03,),
               Text('Lorem App Test' , style: GoogleFonts.inder(
                 fontWeight: FontWeight.bold,
                 fontSize: 24,
 
               ),),
-              SizedBox(height:  10,),
+              SizedBox(height:  sizeScreen.height * 0.01,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -55,31 +57,28 @@ class _SplashScreenState extends State<SplashScreen> {
             ],
           ),
         ),
-
         Positioned(
         top: 0,
-        left: 60,
-        bottom: 600,
-        child:         SvgPicture.asset('assets/images/line.svg'),
+        left:sizeScreen.width*0.27,
+        child:         SvgPicture.asset('assets/images/Line_screen.svg'),
         ),
         Positioned(
           top: 0,
-          left: 34,
-          bottom: 240,
-          child:         SvgPicture.asset('assets/images/light.svg'),
+          left: sizeScreen.width *0.088,
+          bottom: sizeScreen.height*0.28,
+          child:         SvgPicture.asset('assets/images/Group_screen.svg'),
 
         ),
         Positioned(
           top: 0,
-          left: 110,
-          bottom: 600,
-          child:         SvgPicture.asset('assets/images/line.svg'),
+          left: sizeScreen.width *0.15,
+          child:         SvgPicture.asset('assets/images/Line_screen.svg'),
         ),
         Positioned(
           top: 0,
-          left: 84,
-          bottom: 300,
-          child:         SvgPicture.asset('assets/images/light.svg'),
+          left: sizeScreen.width *0.207,
+          bottom: sizeScreen.height*0.32,
+          child:         SvgPicture.asset('assets/images/Group_screen.svg'),
 
         ),
       ],

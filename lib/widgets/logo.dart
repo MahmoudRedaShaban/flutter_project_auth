@@ -6,6 +6,7 @@ class Logo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late Size sizeScreen = MediaQuery.of(context).size;
     return ShaderMask(
       shaderCallback: (dounds)=> LinearGradient(colors: [
         AppColors.primary,
@@ -14,9 +15,15 @@ class Logo extends StatelessWidget {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter
       ).createShader(Rect.fromLTWH(0, 0, dounds.height, dounds.height)),
-      child: Text('LOGO',style: TextStyle(fontSize: 100,
-          fontWeight: FontWeight.w600,
+      child: Text('osws',style: TextStyle(fontSize: sizeScreen.width*0.23,
+          fontWeight: FontWeight.w800,
+          shadows: [
+            Shadow(color: AppColors.primary),
+            Shadow(color: AppColors.sucanndar )
+
+          ],
           fontFamily: 'Prime',
+          fontStyle: FontStyle.normal,
           color: Colors.white
       ) ,
       ),
