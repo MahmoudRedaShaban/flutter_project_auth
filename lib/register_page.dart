@@ -14,7 +14,12 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  TextEditingController first_name = TextEditingController();
+  TextEditingController last_name = TextEditingController();
+  TextEditingController username = TextEditingController();
   TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
+  TextEditingController conform_password = TextEditingController();
   @override
   Widget build(BuildContext context) {
     late final sizeScreean = MediaQuery.of(context).size;
@@ -42,17 +47,17 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),),
                   SizedBox(height: sizeScreean.height*0.03,),
 
-                  CustomTextField(controller: email, hint: 'First Name', icon: Icons.person_2_outlined),
+                  CustomTextField(controller: first_name, hint: 'First Name', icon: Icons.person_2_outlined),
                   SizedBox(height: sizeScreean.height*0.02,),
-                  CustomTextField(controller: email, hint: 'Last Name', icon: Icons.person_2_outlined),
+                  CustomTextField(controller: last_name, hint: 'Last Name', icon: Icons.person_2_outlined),
                   SizedBox(height: sizeScreean.height*0.02,),
-                  CustomTextField(controller: email, hint: 'Username', icon: Icons.person_2_outlined),
+                  CustomTextField(controller: username, hint: 'Username', icon: Icons.person_2_outlined),
                   SizedBox(height: sizeScreean.height*0.02,),
                   CustomTextField(controller: email, hint: 'Email', icon: Icons.email_outlined),
                   SizedBox(height: sizeScreean.height*0.02,),
-                  CustomTextField(controller: email, hint: 'Password', icon: Icons.visibility_outlined),
+                  CustomTextField(controller: password, hint: 'Password', icon: Icons.visibility_outlined),
                   SizedBox(height: sizeScreean.height*0.02,),
-                  CustomTextField(controller: email, hint: 'Confirm Password', icon: Icons.visibility_outlined),
+                  CustomTextField(controller: conform_password, hint: 'Confirm Password', icon: Icons.visibility_outlined),
                   SizedBox(height: sizeScreean.height*0.03,),
                   Container(
                     width: sizeScreean.width *0.3,

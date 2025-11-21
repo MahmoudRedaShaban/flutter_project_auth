@@ -1,4 +1,5 @@
 import 'package:first_project/app_colors.dart';
+import 'package:first_project/foreget_password.dart';
 import 'package:first_project/register_page.dart';
 import 'package:first_project/widgets/custom_text_field.dart';
 import 'package:first_project/widgets/logo.dart';
@@ -49,7 +50,7 @@ class _LoginPagesState extends State<LoginPages> {
                     alignment: Alignment.centerRight,
                     child: GestureDetector(
                       onTap: (){
-
+                        Navigator.of(context).push(MaterialPageRoute(builder: (builder)=> ForegetPassword()));
                       },
                         child: Text("ForGet Password ?", style: GoogleFonts.inter(fontSize: 11),)),
                   ),
