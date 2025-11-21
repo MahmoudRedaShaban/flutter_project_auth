@@ -1,5 +1,6 @@
 import 'package:first_project/app_colors.dart';
 import 'package:first_project/foreget_password.dart';
+import 'package:first_project/home_page.dart';
 import 'package:first_project/register_page.dart';
 import 'package:first_project/widgets/custom_text_field.dart';
 import 'package:first_project/widgets/logo.dart';
@@ -55,31 +56,36 @@ class _LoginPagesState extends State<LoginPages> {
                         child: Text("ForGet Password ?", style: GoogleFonts.inter(fontSize: 11),)),
                   ),
                   SizedBox(height: sizeScreean.height*0.05,),
-                  Container(
-                      width: sizeScreean.width *0.3,
-                      height: sizeScreean.height * 0.06,
-                      decoration: BoxDecoration(
-
-                        boxShadow:  [BoxShadow(
-                          color: Colors.grey,
-                          blurRadius: 80,
-                          spreadRadius: 0.1
-                        )],
-                        borderRadius: BorderRadius.circular(5),
-                        gradient:  LinearGradient(colors: [
-                          AppColors.primary,
-                          Colors.black26
-                        ], begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (builder) => HomePage()));
+                    },
+                    child: Container(
+                        width: sizeScreean.width *0.3,
+                        height: sizeScreean.height * 0.06,
+                        decoration: BoxDecoration(
+                    
+                          boxShadow:  [BoxShadow(
+                            color: Colors.grey,
+                            blurRadius: 80,
+                            spreadRadius: 0.1
+                          )],
+                          borderRadius: BorderRadius.circular(5),
+                          gradient:  LinearGradient(colors: [
+                            AppColors.primary,
+                            Colors.black26
+                          ], begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter
+                          ),
                         ),
+                      child: Center(
+                        child: Text("Log IN", style: GoogleFonts.inter(
+                            color: Colors.white,
+                    
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold
+                        ),),
                       ),
-                    child: Center(
-                      child: Text("Log IN", style: GoogleFonts.inter(
-                          color: Colors.white,
-
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold
-                      ),),
                     ),
                   ),
                   SizedBox(height: sizeScreean.height*0.02,),
