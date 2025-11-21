@@ -1,16 +1,34 @@
-# exampel_flutter
+# Flutter Auth App 🔥
 
-A new Flutter project.
+A clean, modern, and production-ready Flutter authentication flow application with beautiful UI and support for multiple backend providers.
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+- Splash Screen
+- Onboarding (optional, easy to add)
+- Login Screen
+- Register / Sign Up Screen
+- Forgot Password (with email reset)
+- Home Screen (after successful authentication)
+- Multi-provider authentication support:
+    - Firebase Authentication
+    - Supabase Authentication
+    - Custom REST API backend
+- Responsive & Adaptive UI (works on mobile, tablet)
+- Clean architecture & state management ready (you can plug in Provider, Riverpod, Bloc, GetX...)
 
-A few resources to get you started if this is your first Flutter project:
+## 📸 Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="screenshots/splash.png" width="200"/> <img src="screenshots/login.png" width="200"/> <img src="screenshots/register.png" width="200"/> <img src="screenshots/home.png" width="200"/>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+*(Add your actual screenshots in the `/screenshots` folder and update the paths above)*
+
+## 🚀 Tech Stack
+
+- **Framework**: Flutter (3.x + Dart 3)
+- **State Management**: Ready for Provider / Riverpod / Bloc (you choose)
+- **Backend Options**:
+    - Firebase Auth + Firestore
+    - Supabase Auth + PostgreSQL
+    - Custom REST API (Dio / http)
+- **Local Storage**: shared_preferences / hive (for tokens)
